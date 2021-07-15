@@ -3,7 +3,7 @@ name: toyscript client react app CI/CD
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-deploy:
@@ -12,7 +12,7 @@ jobs:
     environment: production
     env:
         AZURE_WEBAPP_NAME: toyscript    
-        AZURE_WEBAPP_PACKAGE_PATH: './build'     
+        AZURE_WEBAPP_PACKAGE_PATH: '.'     
         NODE_VERSION: '14.x'   
         
     steps:
